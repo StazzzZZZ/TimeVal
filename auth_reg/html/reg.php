@@ -1,4 +1,4 @@
-<?php error_reporting(0); ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,22 +13,9 @@
 <body>
     <center>
     <div class="container mt-4">
-        <?php
-            if($_COOKIE['user'] == '' ):
-        ?>
-<div class="row">
-    <div class="col">
-        <h1>Authorization form</h1>
-        <form action="auth.php" method="POST">
-            <input type="text" class="form-control" 
-            placeholder="Write your login" name="login"id="login"><br>
-            <input type="password" class="form-control" 
-            placeholder="Write your pass" name="pass"id="pass"><br>
-            <button class="btn btn-success" type="submit">Log in</button>
-        </form>
-        <br>
-    </div>
-    <div class="col">
+       
+
+<div class="col">
         <h1>Regestration form</h1>
         <form action="check.php" method="POST">
             <input type="text" class="form-control" 
@@ -38,11 +25,11 @@
             <input type="password" class="form-control" 
             placeholder="Write your pass" name="pass"id="pass"><br>
             <button class="btn btn-success" type="submit">Register</button>
+            <a href="log.php">Authorization page</a><br>
+
         </form>
     </div>
-    <?php else:?>
-Hello <?=$_COOKIE['user']?>. <a href="exit.php">Click here to log out</a></p>
-<?php endif;?>
+    
 
 </div>
     </div>
